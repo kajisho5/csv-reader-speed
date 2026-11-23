@@ -1,0 +1,38 @@
+{
+  "name": "csv-reader-speed",
+  "version": "0.1.0",
+  "description": "A fast CSV reader in JavaScript: one left-to-right pass over char codes, returning { columns, rows, errors }.",
+  "license": "MIT",
+  "author": "Shogo Kajiyama",
+  "type": "module",
+  "main": "./solve.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./solve.js",
+      "default": "./solve.js"
+    }
+  },
+  "files": [
+    "solve.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/parser.test.mjs",
+    "bench": "node bench/bench.mjs"
+  },
+  "devDependencies": {
+    "papaparse": "^5.4.1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "csv",
+    "parser",
+    "fast"
+  ]
+}
